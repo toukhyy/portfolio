@@ -1,5 +1,6 @@
 import { Post, Meta } from "@/app/_types/Blog";
 import { mdxCompiler } from "../_lib/mdx";
+import { formatDate } from "./formateDate";
 
 export async function getPostByPath(path: string): Promise<Post | undefined> {
   const result = await fetch(
@@ -49,5 +50,10 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
       postsMeta.push(post.meta);
     }
   }
-  return postsMeta;
+
+  postsMeta.sort((a: Meta, b: Meta) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
+  return postsMeta.map((post) => ({ ...post, date: formatDate(post.date) }));
 }
