@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Abdelrahman El Toukhy's Blog",
-  description: "Simply written articles about React, Next JS, and many more...",
+  description: "Articles about React, Next JS, and many more...",
 };
 
 export default function RootLayout({

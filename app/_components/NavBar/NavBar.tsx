@@ -7,17 +7,13 @@ type Props = {};
 
 function NavBar({}: Props) {
   const path = usePathname();
+  if (path === "/") return null;
 
   return (
-    <nav
-      className={`z-50 w-full px-4 py-5 shadow-sm transition duration-300 ease-linear
-      ${path === "/" ? "fixed text-white backdrop-blur-sm" : ""}`}
-    >
+    <nav className="z-50 w-full px-4 py-5 shadow-sm transition duration-300 ease-linear">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
         <Link href="/">
-          <Logo
-            className={`${path === "/" ? "fill-white" : "fill-black"} w-20`}
-          />
+          <Logo className="w-20 fill-black" />
         </Link>
 
         <ul className="flex gap-6 font-semibold">
