@@ -1,9 +1,13 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Almarai } from "next/font/google";
 import NavBar from "../_components/NavBar/NavBar";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// alternative fonts: Montserrat, Poppins, Oswald, Days_One, Roboto
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["300", "400", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Abdelrahman El Toukhy's Blog",
@@ -17,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={almarai.className}>
         <NavBar />
         {children}
       </body>
