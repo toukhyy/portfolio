@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 function Hero() {
   return (
     <section className="relative min-h-screen bg-hero bg-cover text-neutral-800">
-      <div className="flex h-screen w-full flex-col content-between px-32 py-10 pb-20">
+      <div className="mx-auto flex h-screen w-full max-w-6xl flex-col content-between pb-20 pt-20">
         <h2 className="text-8xl font-black uppercase leading-none tracking-tight opacity-80">
           Abdelrahman
           <br />
