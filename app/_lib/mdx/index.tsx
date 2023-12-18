@@ -59,7 +59,8 @@ export async function mdxCompiler(mdxFile: string) {
                   width: 22,
                   height: 22,
                   fill: "none",
-                  className: "stroke-current text-gray-400 hover:text-red-500",
+                  className:
+                    "stroke-current text-cream-600 hover:text-cream-800",
                 },
                 s("path", {
                   strokeLinecap: "round",

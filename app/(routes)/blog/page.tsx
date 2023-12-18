@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getPostsMeta } from "@/app/_utils/blog";
 import { Meta } from "@/app/_types/Blog";
-import PostCard from "@/app/_components/PostCard/PostCard";
+import PostCard from "@/app/_components/postCard/PostCard";
 import Image from "next/image";
 
 export const revalidate = 0;
@@ -16,13 +16,13 @@ async function page() {
     <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
       <Link
         href={`blog/${mostRecent.slug}`}
-        className="my-16 mb-24 flex h-[70vh] w-full justify-between rounded-md bg-slate-50 shadow-sm  outline outline-offset-4 outline-transparent duration-300 hover:outline-yellow-600"
+        className="hover:outline-cream-500 bg-cream-100 text-cream-900 my-16 mb-24 flex h-[70vh] w-full  justify-between rounded-md shadow-sm outline outline-offset-4 outline-transparent duration-300"
       >
         <div className="flex flex-col gap-12 p-8">
           <p className="font-semibold">Most Recent Article</p>
           <div className="flex h-full flex-col justify-between">
             <p className="text-4xl font-semibold">{mostRecent.title}</p>
-            <p className="text-lg font-semibold text-slate-400">
+            <p className="text-cream-600 text-lg font-semibold">
               {mostRecent.date} — {mostRecent.readTime}
             </p>
           </div>

@@ -45,10 +45,10 @@ async function page({ params }: Props) {
       <header>
         <Link
           href="/blog"
-          className="mb-5 flex items-center gap-2.5 duration-150 hover:text-yellow-700"
+          className="hover:text-cream-800 text-cream-900 mb-5 flex items-center gap-2.5 duration-150"
         >
           <FaArrowLeftLong />
-          <span className="font-semibold ">Back to Blog</span>
+          <span className="font-semibold">Back to Blog</span>
         </Link>
 
         <div className="relative mb-2 flex h-[40rem] w-[60rem] items-center justify-center">
@@ -66,12 +66,12 @@ async function page({ params }: Props) {
             className="absolute z-10 h-full w-full rounded-md object-cover"
           />
         </div>
-        <p className="text-center text-lg font-semibold text-slate-600">
+        <p className="text-cream-800 text-center text-lg font-semibold">
           {post.meta.date} — {post.meta.readTime}
         </p>
       </header>
       <main>
-        <article className="prose prose-slate md:prose-lg">
+        <article className="prose prose-neutral md:prose-lg lg:prose-xl">
           {post?.content}
         </article>
       </main>

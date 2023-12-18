@@ -2,16 +2,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import NavItem from "./NavItem";
-import Logo from "./Logo";
-type Props = {};
 
-function NavBar({}: Props) {
+function NavBar() {
   const path = usePathname();
   // if (path === "/") return null;
 
   return (
     <nav
-      className={`z-50 w-full px-4 py-2.5 text-neutral-600  transition duration-300 ease-linear ${
+      className={`text-cream-900 z-50 w-full px-4 py-2.5  transition duration-300 ease-linear ${
         path === "/" ? "fixed" : "bg-hero shadow"
       }`}
     >
