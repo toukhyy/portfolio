@@ -17,15 +17,14 @@ function NavItem({ title, path, currentPath, matchPath = false }: Props) {
 
   return (
     <li>
-      <Link
-        href={path}
-        className={`${
-          matcher({ path, currentPath, matchPath })
-            ? "underline underline-offset-4"
-            : ""
-        }`}
-      >
-        {title}
+      <Link href={path} className="">
+        {/* {title} */}
+        <p className="">{title}</p>
+        <div
+          className={`transition-width h-0.5 bg-neutral-700 duration-300 ${
+            matcher({ path, currentPath, matchPath }) ? `w-full` : "w-0"
+          }`}
+        ></div>
       </Link>
     </li>
   );
