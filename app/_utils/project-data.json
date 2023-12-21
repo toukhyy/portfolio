@@ -41,22 +41,6 @@
   },
   {
     "type": "frontend",
-    "label": "To-do list",
-    "description": "To-do app connected to a fake RESTful API",
-    "liveUrl": "https://todo-list-iota-five.vercel.app/",
-    "ghRepo": "https://github.com/mactav1sh/todo-react/tree/master",
-    "stack": ["javaScript", "react", "styled Components"]
-  },
-  {
-    "type": "frontend",
-    "label": "Vidtube",
-    "description": "Website for searching and playing videos, using youtube API",
-    "liveUrl": "https://vidtubemact.netlify.app/",
-    "ghRepo": "https://github.com/mactav1sh/vidtube",
-    "stack": ["javaScript", "react", "tailwind"]
-  },
-  {
-    "type": "frontend",
     "label": "my old portfolio",
     "description": "Website for showcasing my projects",
     "liveUrl": "/",
