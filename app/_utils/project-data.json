@@ -1,0 +1,91 @@
+[
+  {
+    "label": "E-store",
+    "type": "frontend",
+    "description": "A MERN stack eccomerce website.",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/toukhyy/estore",
+    "stack": [
+      "typeScript",
+      "react",
+      "React-Query",
+      "tailwind",
+      "nodeJS",
+      "mongoDB",
+      "JWT"
+    ]
+  },
+  {
+    "label": "flyaway's booking",
+    "type": "frontend",
+    "description": "A MERN stack clone of booking website",
+    "liveUrl": "https://flyaway-site.vercel.app/",
+    "ghRepo": "https://github.com/mactav1sh/flyaway-frontend",
+    "stack": ["typeScript", "react", "tailwind", "nodeJS", "mongoDB", "JWT"]
+  },
+  {
+    "label": "Just Buy",
+    "type": "frontend",
+    "description": "An eccomerce website made with Next JS.",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/toukhyy/justbuy",
+    "stack": ["typeScript", "nextJS", "SASS", "framer motion"]
+  },
+  {
+    "label": "Moments",
+    "type": "frontend",
+    "description": "Moments is a social media web app.",
+    "liveUrl": "https://moments-delta.vercel.app/",
+    "ghRepo": "https://github.com/mactav1sh/moments",
+    "stack": ["javaScript", "react", "firebase", "tailwind"]
+  },
+  {
+    "type": "frontend",
+    "label": "To-do list",
+    "description": "To-do app connected to a fake RESTful API",
+    "liveUrl": "https://todo-list-iota-five.vercel.app/",
+    "ghRepo": "https://github.com/mactav1sh/todo-react/tree/master",
+    "stack": ["javaScript", "react", "styled Components"]
+  },
+  {
+    "type": "frontend",
+    "label": "Vidtube",
+    "description": "Website for searching and playing videos, using youtube API",
+    "liveUrl": "https://vidtubemact.netlify.app/",
+    "ghRepo": "https://github.com/mactav1sh/vidtube",
+    "stack": ["javaScript", "react", "tailwind"]
+  },
+  {
+    "type": "frontend",
+    "label": "my old portfolio",
+    "description": "Website for showcasing my projects",
+    "liveUrl": "/",
+    "public": false,
+    "ghRepo": "/",
+    "stack": ["typeScript", "react", "tailwind"]
+  },
+  {
+    "type": "backend",
+    "label": "storefront API",
+    "description": "Storefront API is a RESTFul API with PostgreSQL Database, created for Udacity's JS Full Stack Nanodegree",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/mactav1sh/storefront-backend",
+    "stack": ["typeScript", "nodeJS", "postgres", "JWT", "jasmine"]
+  },
+  {
+    "type": "backend",
+    "label": "Image Processing API",
+    "description": "Image Processing API is an API for scaling images and can be used as a library to serve pre-scaled images, created for Udacity's JS Full Stack Nanodegree",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/mactav1sh/Image-Processing-API",
+    "stack": ["typeScript", "nodejs", "postgres", "jasmine"]
+  },
+  {
+    "type": "backend",
+    "label": "flyaway API",
+    "description": "Flyaway API is an API for a Travels Booking website complete with encryption using bcrypt and authentication using JWTs sent in cookies",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/mactav1sh/flyaway-backend",
+    "stack": ["typeScript", "nodeJS", "mongoDB", "JWT"]
+  }
+]
