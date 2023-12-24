@@ -5,21 +5,19 @@ import NavItem from "./NavItem";
 
 function NavBar() {
   const path = usePathname();
-  // if (path === "/") return null;
 
   return (
     <nav
       className={`z-50 w-full px-4 py-2.5 text-cream-900  transition duration-300 ease-linear ${
-        path === "/blog" ? "bg-hero shadow" : "fixed"
+        path !== "/" ? "bg-hero shadow" : "absolute"
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <Link href="/" className="text-2xl font-black uppercase">
-          {/* <Logo className="w-20 fill-black" /> */}
+        <Link href="/" className="text-xl font-black uppercase md:text-2xl">
           A.T.
         </Link>
 
-        <ul className="flex gap-4 font-semibold">
+        <ul className="flex gap-3 md:gap-4">
           <NavItem title="Home" path="/" currentPath={path} />
           <NavItem
             title="Blog"
