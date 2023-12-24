@@ -3,7 +3,7 @@
     "label": "E-store",
     "type": "frontend",
     "description": "A MERN stack eccomerce website.",
-    "liveUrl": "",
+    "liveUrl": "https://estore-proj.vercel.app",
     "ghRepo": "https://github.com/toukhyy/estore",
     "stack": [
       "typeScript",

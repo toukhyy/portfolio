@@ -7,7 +7,7 @@ function PostCard({ post }: { post: Meta }) {
   const { bannerCredits, banner, slug, title, date, readTime } = post;
 
   return (
-    <li className="hover:outline-cream-500  text-cream-900 w-80 overflow-hidden rounded-md shadow outline outline-2 outline-offset-4 outline-transparent duration-300">
+    <li className="w-80  overflow-hidden rounded-md text-cream-900 shadow outline outline-2 outline-offset-4 outline-transparent duration-300 hover:outline-cream-500">
       <Link href={`blog/${slug}`}>
         <Image
           alt={bannerCredits}
@@ -18,7 +18,7 @@ function PostCard({ post }: { post: Meta }) {
           className="h-[40vh] object-cover"
         />
         <div className="px-4 pb-8 pt-4">
-          <p className="text-cream-700 mb-3 text-sm">
+          <p className="mb-3 text-sm text-cream-700">
             {date} — {readTime}
           </p>
           <p className="text-xl font-semibold">{title}</p>

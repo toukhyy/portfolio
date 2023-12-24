@@ -4,22 +4,21 @@ import Marquee from "react-fast-marquee";
 function Hero() {
   return (
     <section className="relative min-h-screen bg-hero bg-cover text-cream-1000">
-      <div className="mx-auto flex h-screen w-full max-w-6xl flex-col content-between pb-20 pt-20">
-        <h2 className="text-8xl font-black uppercase leading-none tracking-tight opacity-80">
+      <div className="mx-auto flex h-screen w-full max-w-6xl flex-col content-between px-5 pb-10 pt-20 md:px-10 md:pb-20 lg:px-2">
+        <h2 className="flex-1 text-[2.6rem] font-black uppercase leading-none tracking-tight opacity-80 md:flex-auto md:text-6xl lg:text-7xl">
           Abdelrahman
           <br />
           eltoukhy
         </h2>
 
-        <div className="flex h-full w-full items-end justify-between">
+        <div className="flex h-full w-full flex-1 flex-col items-center justify-between md:flex-auto md:flex-row md:items-end md:justify-between">
           <div className="grid gap-2 text-sm uppercase">
-            {/* <RotatingBtn /> */}
             <Link
               href="/blog"
-              className="w-40 max-w-md bg-cream-900 px-1  text-center tracking-wider text-orange-100"
+              className="w-52 max-w-md bg-cream-900 px-1 text-center  tracking-wider text-orange-100 md:w-40"
             >
               <Marquee speed={12} autoFill pauseOnHover>
-                <p className="mr-10 py-1.5">Blog</p>
+                <p className="mr-16 py-1.5 md:mr-10">Blog</p>
               </Marquee>
             </Link>
             <Link
@@ -32,7 +31,7 @@ function Hero() {
               <p>About me</p>
             </div>
           </div>
-          <p className="self-end text-end text-7xl font-black uppercase leading-none tracking-tight opacity-80">
+          <p className="self-end text-end text-4xl font-black uppercase leading-none tracking-tight opacity-80 md:text-6xl">
             Web
             <br />
             Developer
