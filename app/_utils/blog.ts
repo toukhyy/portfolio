@@ -1,6 +1,6 @@
 import { Post, Meta } from "@/app/_types/Blog";
 import { mdxCompiler } from "../_lib/mdx";
-import { formatDate } from "./formateDate";
+import { formatDate } from "./formatDate";
 
 export async function getPostByPath(path: string): Promise<Post | undefined> {
   const result = await fetch(

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type Props = {
   project: {
     label: string;
@@ -13,7 +11,7 @@ type Props = {
 function ProjectCard({ project }: Props) {
   return (
     <li>
-      <div className="flex h-full w-64 flex-col justify-between overflow-hidden rounded border-2 border-cream-800">
+      <div className="projectCard-shadow flex h-full w-64 flex-col justify-between overflow-hidden rounded border-2 border-cream-800">
         <div>
           <p className="py-2 text-center text-lg font-semibold capitalize">
             {project.label}
@@ -42,9 +40,7 @@ function ProjectCard({ project }: Props) {
             </a>
           ) : (
             <div className="o relative flex-1 overflow-hidden border-r-2 border-cream-800 py-1 text-center tracking-wider">
-              {/* <span>N/A</span> */}
-              <div className="absolute -left-1 top-[62%] h-[1.5px] w-40 rotate-[15deg] bg-cream-800  opacity-50"></div>
-              <div className="absolute -right-1 top-[62%] h-[1.5px] w-40 -rotate-[15deg] bg-cream-800 opacity-50"></div>
+              <span className="font-bold text-cream-800">—</span>
             </div>
           )}
           <a

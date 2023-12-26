@@ -1,10 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getPostsMeta } from "@/app/_utils/blog";
 import { Meta } from "@/app/_types/Blog";
 import PostCard from "@/app/_components/postCard/PostCard";
-import Image from "next/image";
 
-export const revalidate = 0;
+export const revalidate = 86400;
 
 async function page() {
   const postsMeta = await getPostsMeta();

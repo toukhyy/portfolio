@@ -2,13 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { getPostsMeta, getPostByPath } from "@/app/_utils/blog";
-import { formatDate } from "@/app/_utils/formateDate";
 
 type Props = {
   params: { slug: string };
 };
 
-export const revalidate = 0;
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   const postsMeta = await getPostsMeta();

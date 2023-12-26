@@ -40,15 +40,6 @@
     "stack": ["javaScript", "react", "firebase", "tailwind"]
   },
   {
-    "type": "frontend",
-    "label": "my old portfolio",
-    "description": "Website for showcasing my projects",
-    "liveUrl": "/",
-    "public": false,
-    "ghRepo": "/",
-    "stack": ["typeScript", "react", "tailwind"]
-  },
-  {
     "type": "backend",
     "label": "storefront API",
     "description": "Storefront API is a RESTFul API with PostgreSQL Database, created for Udacity's JS Full Stack Nanodegree",
