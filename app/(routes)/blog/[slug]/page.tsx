@@ -72,7 +72,7 @@ async function page({ params }: Props) {
         </p>
       </header>
       <main>
-        <article className="prose prose-sm prose-neutral mx-auto px-4 md:prose-lg lg:prose-xl">
+        <article className="prose prose-sm prose-neutral mx-auto px-4 pb-16 md:prose-lg lg:prose-xl md:pb-20">
           {post?.content}
         </article>
       </main>

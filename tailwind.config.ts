@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('/assets/hero.jpg')",
+        hero: "url('/assets/hero.webp')",
       },
       colors: {
         cream: {
