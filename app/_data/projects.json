@@ -1,0 +1,63 @@
+[
+  {
+    "label": "Estore",
+    "description": "An eccomerce website built with React and TS, server state handled with React Query, styled with TailwindCSS, Backend built with Node JS and MongoDB.",
+    "liveUrl": "https://estore-proj.vercel.app",
+    "ghRepo": "https://github.com/toukhyy/estore",
+    "stack": [
+      "typeScript",
+      "react",
+      "React-Query",
+      "tailwind",
+      "nodeJS",
+      "mongoDB",
+      "JWT"
+    ],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673571/projects/estore-web_hucsct.webp",
+    "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705684898/projects/estore-mobile_h8ekxn.png"
+  },
+  {
+    "label": "flyaway's booking",
+    "description": "A clone of booking website built with React and TS, state handled with context and reducers, styled with TailwindCSS, Backend built with Node JS and MongoDB.",
+    "additionalDesc": "",
+    "liveUrl": "https://flyaway-site.vercel.app/",
+    "ghRepo": "https://github.com/mactav1sh/flyaway-frontend",
+    "stack": ["typeScript", "react", "tailwind", "nodeJS", "mongoDB", "JWT"],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705684582/projects/booking-web_hsxj4h.webp",
+    "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705684581/projects/booking-mobile_sqhu66.webp"
+  },
+  {
+    "label": "Just Buy",
+    "description": "An eccomerce website made with Next JS, Redux toolkit, Integrated with Stripe, styled with SASS.",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/toukhyy/justbuy",
+    "stack": ["typeScript", "nextJS", "SASS", "framer motion"],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673986/projects/justbuy-web_ssl9wf.webp",
+    "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673986/projects/justbuy-mobile_q2zpxh.webp"
+  },
+  {
+    "label": "Moments",
+    "description": "Moments is a social media web app.",
+    "liveUrl": "https://moments-delta.vercel.app/",
+    "ghRepo": "https://github.com/mactav1sh/moments",
+    "stack": ["javaScript", "react", "firebase", "tailwind"],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705753222/projects/moments-web_o7nttg.webp",
+    "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705753222/projects/moments-mobile_rgwhtp.webp"
+  },
+  {
+    "label": "flyaway API",
+    "description": "A RESTFul for a Travels Booking website complete with encryption using bcrypt and authentication using JWTs sent in cookies.",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/mactav1sh/flyaway-backend",
+    "stack": ["typeScript", "nodeJS", "mongoDB", "JWT"],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705754512/projects/flyaway-api_yx7vge.webp"
+  },
+  {
+    "label": "storefront API",
+    "description": "A RESTFul API with PostgreSQL Database, created for Udacity's JS Full Stack Nanodegree.",
+    "liveUrl": "",
+    "ghRepo": "https://github.com/mactav1sh/storefront-backend",
+    "stack": ["typeScript", "nodeJS", "postgres", "JWT", "jasmine"],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705754511/projects/storefront-api_lxigb6.webp"
+  }
+]
