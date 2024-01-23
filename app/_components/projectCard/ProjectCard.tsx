@@ -22,15 +22,15 @@ const placeholderMob =
 
 function ProjectCard({ project }: Props) {
   return (
-    <li className="flex w-full flex-row justify-between gap-10 even:flex-row-reverse">
+    <li className="flex w-full flex-col justify-between gap-6 md:flex-row md:gap-10 md:even:flex-row-reverse">
       {/* img with background */}
-      <div className="relative flex flex-[1.5] items-center justify-center rounded-md bg-cream-200 p-14">
+      <div className="relative flex flex-[1.5] items-center justify-center rounded-md bg-cream-200 p-8 md:p-8 lg:p-14">
         <Image
           alt={project.label}
           src={project.webImg || placeholderWeb}
           width="1150"
           height="650"
-          className="max-w-xl rounded-md"
+          className="rounded-md lg:max-w-xl"
         />
         {project.mobImg && (
           <Image
@@ -38,19 +38,21 @@ function ProjectCard({ project }: Props) {
             src={project.mobImg}
             width="260"
             height="420"
-            className="absolute right-10 top-32 h-56 w-min rounded-md shadow-base"
+            className="absolute right-5 top-14 h-32 w-min rounded-md shadow-base md:right-5 md:top-16 md:h-40 lg:right-10 lg:top-32 lg:h-56"
           />
         )}
       </div>
       {/* description */}
-      <div className="flex h-full flex-1 flex-col justify-end p-4">
+      <div className="flex h-full flex-1 flex-col px-2 md:justify-end md:p-4">
         <Link
           target="_blank"
           href={project.liveUrl || project.ghRepo}
-          className="group relative mb-2.5 w-max"
+          className="group relative mb-0.5 w-max md:mb-2.5"
         >
-          <p className=" text-3xl font-bold uppercase">{project.label}</p>
-          <HiMiniArrowUpRight className="absolute -right-6 top-0 h-6 w-6 text-cream-600 duration-200 group-hover:-right-7 group-hover:-top-1" />
+          <p className="text-lg font-bold uppercase md:text-2xl lg:text-3xl">
+            {project.label}
+          </p>
+          <HiMiniArrowUpRight className="absolute -right-4 top-0.5 h-4 w-4 text-cream-600 duration-200 group-hover:-right-5 group-hover:-top-1 md:-right-6 md:top-0 md:h-6 md:w-6 md:group-hover:-right-7 md:group-hover:-top-1" />
         </Link>
         <p className="mb-3 max-w-sm text-xs text-cream-600">
           {project.description}

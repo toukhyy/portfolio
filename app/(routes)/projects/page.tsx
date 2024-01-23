@@ -4,13 +4,13 @@ import projects from "@/app/_data/projects.json";
 function page() {
   return (
     <section className="bg-cover px-5 text-cream-1000 lg:px-0">
-      <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-16 pb-16 pt-12">
-        <h1 className="text-3xl font-black uppercase opacity-90 md:text-4xl lg:text-5xl">
+      <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 pt-8 md:gap-12 md:pb-16 md:pt-12 lg:gap-16">
+        <h1 className="text-2xl font-black uppercase opacity-90 md:text-4xl lg:text-5xl">
           Projects
         </h1>
         {/* PROJECTS */}
         <div className="mx-auto w-full">
-          <ul className="grid auto-rows-fr gap-24">
+          <ul className="grid auto-rows-fr gap-16 md:gap-28">
             {projects.map((project) => (
               <ProjectCard key={project.label} project={project} />
             ))}
