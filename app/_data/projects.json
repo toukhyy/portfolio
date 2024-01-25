@@ -17,6 +17,15 @@
     "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705684898/projects/estore-mobile_h8ekxn.png"
   },
   {
+    "label": "Just Buy",
+    "description": "An eccomerce website made with Next JS, Prisma, NextAuth, Redux toolkit, Integrated with Stripe, styled with SASS.",
+    "liveUrl": "https://justbuy-proj.vercel.app",
+    "ghRepo": "https://github.com/toukhyy/justbuy",
+    "stack": ["typeScript", "nextJS", "SASS", "framer motion"],
+    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673986/projects/justbuy-web_ssl9wf.webp",
+    "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673986/projects/justbuy-mobile_q2zpxh.webp"
+  },
+  {
     "label": "flyaway's booking",
     "description": "A clone of booking website built with React and TS, state handled with context and reducers, styled with TailwindCSS, Backend built with Node JS and MongoDB.",
     "additionalDesc": "",
@@ -25,15 +34,6 @@
     "stack": ["typeScript", "react", "tailwind", "nodeJS", "mongoDB", "JWT"],
     "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705684582/projects/booking-web_hsxj4h.webp",
     "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705684581/projects/booking-mobile_sqhu66.webp"
-  },
-  {
-    "label": "Just Buy",
-    "description": "An eccomerce website made with Next JS, Redux toolkit, Integrated with Stripe, styled with SASS.",
-    "liveUrl": "",
-    "ghRepo": "https://github.com/toukhyy/justbuy",
-    "stack": ["typeScript", "nextJS", "SASS", "framer motion"],
-    "webImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673986/projects/justbuy-web_ssl9wf.webp",
-    "mobImg": "https://res.cloudinary.com/doaw1mqkw/image/upload/v1705673986/projects/justbuy-mobile_q2zpxh.webp"
   },
   {
     "label": "Moments",
