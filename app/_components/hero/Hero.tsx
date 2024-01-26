@@ -27,9 +27,12 @@ function Hero() {
             >
               <p>Projects</p>
             </Link>
-            <div className="cursor-not-allowed border-2 border-cream-900 py-1.5 text-center tracking-wider duration-200 hover:bg-cream-900 hover:text-orange-100">
+            <Link
+              href="/about"
+              className="border-2 border-cream-900 py-1.5 text-center tracking-wider duration-200 hover:bg-cream-900 hover:text-orange-100"
+            >
               <p>About me</p>
-            </div>
+            </Link>
           </div>
           <p className="self-end text-end text-4xl font-black uppercase leading-none tracking-tight opacity-80 md:text-6xl">
             Web

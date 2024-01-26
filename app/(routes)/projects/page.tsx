@@ -1,5 +1,11 @@
 import ProjectCard from "@/app/_components/projectCard/ProjectCard";
 import projects from "@/app/_data/projects.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Abdelrahman El Toukhy's Projects",
+};
 
 function page() {
   return (
