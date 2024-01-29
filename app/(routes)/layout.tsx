@@ -1,5 +1,5 @@
 import { Almarai } from "next/font/google";
-import NavBar from "../_components/navBar/NavBar";
+import NavBar from "../_components/header/Header";
 import "./globals.css";
 
 // alternative fonts: Montserrat, Poppins, Oswald, Days_One, Roboto
