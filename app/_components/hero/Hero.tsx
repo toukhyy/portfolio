@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import { FaArrowRight } from "react-icons/fa6";
 
 function Hero() {
   return (
@@ -17,15 +18,12 @@ function Hero() {
               href="/blog"
               className="w-52 max-w-md bg-cream-900 px-1 text-center  tracking-wider text-orange-100 md:w-40"
             >
-              <Marquee speed={12} autoFill pauseOnHover>
-                <p className="mr-16 py-1.5 md:mr-10">Blog</p>
+              <Marquee direction="right" speed={12} autoFill pauseOnHover>
+                <div className="mr-5 flex items-center py-1.5">
+                  <p className="mr-5">Blog</p>
+                  <FaArrowRight />
+                </div>
               </Marquee>
-            </Link>
-            <Link
-              href="/projects"
-              className="border-2 border-cream-900 py-1.5 text-center tracking-wider duration-200 hover:bg-cream-900 hover:text-orange-100"
-            >
-              <p>Projects</p>
             </Link>
             <Link
               href="/about"

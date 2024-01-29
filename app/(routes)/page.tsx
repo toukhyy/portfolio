@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Hero from "../_components/hero/Hero";
 
 export const metadata: Metadata = {
-  title: "Abdelrahman El Toukhy's Blog",
+  title: "Abdelrahman El Toukhy",
   description: "Toukhy's portfolio and blog",
 };
 

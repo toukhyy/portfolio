@@ -54,7 +54,7 @@ async function page({ params }: Props) {
 
         <div className="relative mb-2 h-52 md:h-80 lg:h-[40rem]">
           <div className="flex h-full w-full items-center justify-center">
-            <h2 className="z-30 max-w-xs text-center text-xl font-bold text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.8)] md:max-w-xl md:text-3xl lg:text-4xl">
+            <h2 className="z-10 max-w-xs text-center text-xl font-bold text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.8)] md:max-w-xl md:text-3xl lg:text-4xl">
               {post.meta.title}
             </h2>
           </div>
