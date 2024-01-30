@@ -19,8 +19,8 @@ function Hero() {
               className="w-52 max-w-md bg-cream-900 px-1 text-center  tracking-wider text-orange-100 md:w-40"
             >
               <Marquee direction="right" speed={12} autoFill pauseOnHover>
-                <div className="mr-5 flex items-center py-1.5">
-                  <p className="mr-5">Blog</p>
+                <div className="mr-5 flex items-center border-2 border-cream-900">
+                  <p className="mr-5 py-1.5">Blog</p>
                   <FaArrowRight />
                 </div>
               </Marquee>

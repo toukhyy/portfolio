@@ -43,13 +43,14 @@ function NavBar() {
       {/* NAV OVERLAY */}
       {
         <nav
-          className="fixed -top-full left-0 z-20 h-screen w-full bg-cream-1000 duration-200"
+          className="fixed -top-[150%] left-0 z-20 h-screen w-full bg-cream-1000 duration-200"
           style={{
-            top: open ? "0" : "-100%",
+            top: open ? "0" : "-150%",
             transitionDelay: open ? "0" : "0",
             transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
+          {/* NAV ITEMS */}
           <ul className="flex h-full flex-col items-center justify-center gap-10 text-2xl font-thin uppercase tracking-widest text-cream-200 lg:text-4xl">
             <NavigationItem
               currentPath={path}
