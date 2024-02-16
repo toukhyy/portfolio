@@ -43,7 +43,7 @@ function NavBar() {
       {/* NAV OVERLAY */}
       {
         <nav
-          className="fixed -top-[150%] left-0 z-20 h-screen w-full bg-cream-1000 duration-200"
+          className="bg-navigation-menu fixed -top-[150%] left-0 z-20 h-screen w-full  duration-200"
           style={{
             top: open ? "0" : "-150%",
             transitionDelay: open ? "0" : "0",

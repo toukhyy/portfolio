@@ -13,21 +13,21 @@ function Hero() {
         </h2>
 
         <div className="flex h-full w-full flex-1 flex-col items-center justify-between md:flex-auto md:flex-row md:items-end md:justify-between">
-          <div className="grid gap-2 text-sm uppercase">
+          <div className="grid gap-2.5 text-sm uppercase">
             <Link
               href="/blog"
-              className="w-52 max-w-md bg-cream-900 px-1 text-center  tracking-wider text-orange-50 md:w-40"
+              className="w-52 bg-cream-900 px-1 text-center  tracking-wider text-orange-50"
             >
               <Marquee direction="right" speed={12} autoFill pauseOnHover>
                 <div className="mr-5 flex items-center border-2 border-cream-900">
-                  <p className="mr-5 py-1.5">Blog</p>
+                  <p className="mr-5 py-2">Blog</p>
                   <FaArrowRight />
                 </div>
               </Marquee>
             </Link>
             <Link
               href="/about"
-              className="border-2 border-cream-900 py-1.5 text-center tracking-wider duration-200 hover:bg-cream-900 hover:text-orange-50"
+              className="border-2 border-cream-900 py-2 text-center tracking-wider duration-200 hover:bg-cream-900 hover:text-orange-50"
             >
               <p>About me</p>
             </Link>
