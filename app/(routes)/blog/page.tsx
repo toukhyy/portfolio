@@ -19,7 +19,7 @@ async function page() {
 
   const [mostRecent, ...rest] = postsMeta;
   return (
-    <div className="mx-auto my-10 flex max-w-5xl flex-col items-center justify-center gap-16 px-4 md:my-16 md:px-4 lg:px-0">
+    <div className="mx-auto mb-16 mt-24 flex max-w-5xl flex-col items-center justify-center gap-16 px-4 md:mt-28 md:px-4 lg:px-0">
       <Link
         href={`blog/${mostRecent.slug}`}
         className="flex w-full flex-col items-center justify-between overflow-hidden rounded-md bg-cream-200 text-cream-900 shadow-sm outline outline-offset-4 outline-transparent duration-300 hover:outline-cream-500 md:h-[50vh] md:flex-row md:items-stretch lg:h-[70vh]"

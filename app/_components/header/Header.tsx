@@ -18,9 +18,7 @@ function NavBar() {
 
   return (
     <header
-      className={`z-50 w-full px-4 py-3 text-cream-900  transition duration-300 ease-linear ${
-        path !== "/" ? "bg-hero shadow" : "absolute"
-      }`}
+      className={`absolute top-7 z-50 w-full px-4  text-cream-900 transition duration-300 ease-linear`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         {/* NAV OVERLAY */}

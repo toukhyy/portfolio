@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 function Hero() {
   return (
     <section className="relative min-h-screen  bg-cover text-cream-1000">
-      <div className="mx-auto flex h-screen w-full max-w-6xl flex-col content-between px-5 pb-10 pt-20 md:px-10 md:pb-20 lg:px-2">
+      <div className="mx-auto flex h-screen w-full max-w-6xl flex-col content-between px-5 pb-10 pt-20 md:px-10  md:pb-20 md:pt-24 lg:px-2">
         <h2 className="flex-1 text-[2.6rem] font-black uppercase leading-none tracking-tight opacity-80 md:flex-auto md:text-6xl lg:text-7xl">
           Abdelrahman
           <br />

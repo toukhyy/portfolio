@@ -54,18 +54,19 @@ function ProjectCard({ project }: Props) {
           </p>
           <HiMiniArrowUpRight className="absolute -right-4 top-0.5 h-4 w-4 text-cream-600 duration-200 group-hover:-right-5 group-hover:-top-1 md:-right-6 md:top-0 md:h-6 md:w-6 md:group-hover:-right-7 md:group-hover:-top-1" />
         </Link>
-        <p className="mb-3 max-w-sm text-xs text-cream-600">
+        <p className="mb-3 max-w-sm text-xs text-cream-700">
           {project.description}
         </p>
 
-        <div className="flex items-center gap-1 font-thin text-cream-600">
+        <div className="flex items-center gap-1 font-thin text-cream-700">
           <FaStarOfLife className="h-2.5 w-2.5" />
           <div className="text-xs">
             <span>click the label for the live version</span>
             <span> or check the code </span>
             <a
+              target="_blank"
               href={project.ghRepo}
-              className="rounded bg-cream-100 p-0.5 text-cream-600 duration-200 hover:bg-cream-300"
+              className="rounded bg-cream-100 p-0.5 duration-200 hover:bg-cream-300"
             >
               here.
             </a>
