@@ -58,3 +58,12 @@ div[data-rehype-pretty-code-fragment] code > [data-line]::before {
   margin-right: 1.5rem;
   color: #919397;
 }
+
+#gradient-canvas {
+  width: 100%;
+  height: 100%;
+  --gradient-color-1: #f9f7f6;
+  --gradient-color-2: #eae0da;
+  --gradient-color-3: #a0c3d2;
+  --gradient-color-4: #e6a4b4;
+}
