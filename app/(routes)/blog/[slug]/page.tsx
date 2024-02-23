@@ -7,8 +7,6 @@ type Props = {
   params: { slug: string };
 };
 
-export const revalidate = 86400;
-
 export async function generateStaticParams() {
   const postsMeta = await getPostsMeta();
 
@@ -21,7 +19,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = params;
-  const post = await getPostByPath(`content/${slug}/index.mdx`);
+
+  const post = await getPostByPath(slug);
   if (!post) {
     return {
       title: "Post Not Found",
@@ -36,7 +35,7 @@ export async function generateMetadata({ params }: Props) {
 async function page({ params }: Props) {
   const { slug } = params;
 
-  const post = await getPostByPath(`content/${slug}/index.mdx`);
+  const post = await getPostByPath(slug);
   if (!post) return <h1>Not Found</h1>;
 
   return (

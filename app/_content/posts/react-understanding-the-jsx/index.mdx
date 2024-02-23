@@ -1,0 +1,47 @@
+---
+title: 'React: Understanding The JSX.'
+date: '2023-12-28'
+tags: ['programming', 'javaScript', 'reactJS', 'nextJS']
+banner: 'https://res.cloudinary.com/doaw1mqkw/image/upload/v1698612577/toukhy/christian-holzinger-CUY_YHhCFl4-unsplash-compresses_xk8iun.jpg'
+bannerCredits: Photo by Christian Holzinger (https://unsplash.com/@pixelatelier)
+---
+
+JSX is an extension of JavaScript syntax that allows you to write HTML-like code within your JavaScript files. However, since JSX is not valid JavaScript, it needs to be transformed into JavaScript code that can be understood by the browser.
+
+React utilizes a popular JavaScript compiler called Babel to perform the JSX transformation. Babel is responsible for parsing the JSX syntax and converting it into regular JavaScript function calls. Once the transformation is complete, the resulting JavaScript code is executed by the browser's JavaScript engine.
+
+Let's outline the steps involved when React runs JSX:
+
+1. **Compilation**: When you write JSX code, it must be compiled into plain JavaScript. This compilation process typically occurs during the build phase using tools like Babel. Babel parses the JSX syntax and transforms it into function calls.
+
+2. **createElement()**: During the compilation process, JSX elements are translated into calls to the `React.createElement()` function. This function accepts three arguments:
+
+   - The element's type (e.g., a string for HTML tags or a reference to a React component).
+   - An object containing properties (props) to be passed to the element.
+   - The element's children, which can be other JSX elements or plain text.
+
+```jsx title="ComponentOne.js"
+const Greeting = () => {
+  return return <h1>Hello</h1>;
+};
+```
+
+**Is the same as**
+
+```jsx title="ComponentOne.js"
+function Greeting({ name }) {
+  return createElement(
+    'h1',
+    { className: 'greeting' },
+    'Hello'
+  );
+}
+```
+
+3. **Component Rendering**: Once JSX code is converted into `React.createElement()` function calls, React utilizes these calls to create a virtual representation of the user interface known as the virtual DOM (Document Object Model). The virtual DOM serves as a lightweight copy of the actual DOM.
+
+4. **Diffing and Reconciliation**: React performs a process known as diffing to compare the virtual DOM with its previous version. By identifying the differences between the two representations, React determines the minimum number of changes required to update the actual DOM.
+
+5. **DOM Update**: Following the diffing process, React applies the necessary changes to the actual DOM. It efficiently applies only the required updates, rather than re-rendering the entire user interface. This approach improves performance significantly.
+
+In summary, when React runs JSX, it compiles the JSX code into plain JavaScript using tools like Babel. The resulting code consists of `React.createElement()` function calls, which are employed to create a virtual representation of the user interface. React then performs diffing to identify the minimum changes needed and updates the actual DOM accordingly.

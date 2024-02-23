@@ -5,8 +5,6 @@ import { Meta } from "@/app/_types/Blog";
 import PostCard from "@/app/_components/postCard/PostCard";
 import { Metadata } from "next";
 
-export const revalidate = 86400;
-
 export const metadata: Metadata = {
   title: "Blog",
   description: "Abdelrahman El Toukhy's Blog",
