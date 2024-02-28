@@ -7,7 +7,6 @@ import { MDImage } from "./components";
 import rehypePrettyCode, { type Options } from "rehype-pretty-code";
 import slugify from "@sindresorhus/slugify";
 import readingTime from "reading-time";
-import { Meta } from "@/app/_types/Blog";
 
 const options: Options = {
   theme: "github-dark-dimmed",
@@ -17,7 +16,13 @@ const options: Options = {
 
 export async function mdxCompiler(mdxFile: string) {
   const { text } = readingTime(mdxFile);
-  const { frontmatter, content } = await compileMDX<Omit<Meta, "readTime">>({
+  const { frontmatter, content } = await compileMDX<{
+    title: string;
+    date: string;
+    tags: string[];
+    banner: string;
+    bannerCredits: string;
+  }>({
     source: mdxFile,
     components: {
       h1: (props) => <h1 {...props} className="group" />,
@@ -71,22 +76,11 @@ export async function mdxCompiler(mdxFile: string) {
     },
   });
 
-  const { tags, title, date, banner, bannerCredits, language, translations } =
-    frontmatter;
+  const { tags, title, date, banner, bannerCredits } = frontmatter;
   const slug = slugify(title.toLowerCase());
 
   const blogPost: Post = {
-    meta: {
-      language,
-      translations,
-      slug,
-      tags,
-      date,
-      title,
-      banner,
-      bannerCredits,
-      readTime: text,
-    },
+    meta: { slug, tags, date, title, banner, bannerCredits, readTime: text },
     content,
   };
 
