@@ -1,0 +1,63 @@
+---
+title: "Styling in Next.js 13"
+date: "2023-11-01"
+language: "en"
+translations: ["en"]
+tags: ["programming", "JavaScript", "ReactJS", "NextJS"]
+banner: "https://res.cloudinary.com/doaw1mqkw/image/upload/v1699259403/toukhy/steve-johnson-mfYFY0XnFug-unsplash-compressed_hpiwjb.jpg"
+bannerCredits: Photo by Steve Johnson (https://unsplash.com/@steve-johnson)
+---
+
+Next.js 13 provides several options for styling your applications, allowing you to choose the approach that best suits your needs. In this article, we'll explore some of the common ways to style Next.js 13 applications.
+
+## CSS Modules
+
+CSS Modules is a popular approach for styling React applications, and it works seamlessly with Next.js 13. To use CSS Modules, you can create a CSS file and import it into your components. Next.js will automatically generate unique class names for your styles, ensuring that they are scoped to the component that uses them.
+
+```css title="styles.module.css"
+.container {
+  padding: 16px;
+  background-color: #f1f1f1;
+}
+```
+
+**then you would use it like this in the component**
+
+```jsx title="MyComponent.js"
+import styles from "./styles.module.css";
+
+const MyComponent = () => {
+  return <div className={styles.container}>Hello, Next.js 13!</div>;
+};
+
+export default MyComponent;
+```
+
+## CSS-in-JS Libraries
+
+Next.js 13 also works well with CSS-in-JS libraries like Styled Components or Emotion. These libraries allow you to write CSS directly in your JavaScript code using tagged template literals.
+
+```jsx title="MyComponent.js"
+import styled from "styled-components";
+
+const Container = styled.div`
+  padding: 16px;
+  background-color: #f1f1f1;
+`;
+
+const MyComponent = () => {
+  return <Container>Hello, Next.js 13!</Container>;
+};
+
+export default MyComponent;
+```
+
+## Tailwind CSS
+
+If you prefer utility-first CSS frameworks, Next.js 13 has excellent support for Tailwind CSS. You can install Tailwind CSS in your Next.js 13 project by following the installation instructions in the Tailwind CSS documentation. Once installed, you can start using the utility classes provided by Tailwind CSS in your components.
+
+## Conclusion
+
+Next.js 13 provides a variety of options for styling your applications, including CSS Modules, CSS-in-JS libraries like Styled Components or Emotion, and integration with utility-first CSS frameworks like Tailwind CSS. In this article, we explored some of the common ways to style Next.js 13 applications. Choose the approach that best fits your needs and start building beautiful and responsive user interfaces with Next.js 13.
+
+Please note that Next.js 13 is a fictional version created for the purpose of this article, and the actual features and improvements may differ in real-world releases.
