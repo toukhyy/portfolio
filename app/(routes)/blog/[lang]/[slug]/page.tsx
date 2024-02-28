@@ -17,11 +17,7 @@ export async function generateStaticParams() {
     );
   });
 
-  if (!postsMeta) return [];
-
-  return postsMeta.map((post) => ({
-    slug: post.slug,
-  }));
+  return staticParams;
 }
 
 export async function generateMetadata({ params }: Props) {
