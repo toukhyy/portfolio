@@ -4,24 +4,26 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { getPostsMeta, getPostByPath } from "@/app/_utils/blog";
 
 type Props = {
-  params: { slug: string };
+  params: { slug: string; lang: string };
 };
-
-export const revalidate = 86400;
 
 export async function generateStaticParams() {
   const postsMeta = await getPostsMeta();
+  const staticParams: { slug: string; lang: string }[] = [];
 
-  if (!postsMeta) return [];
+  postsMeta?.forEach((post) => {
+    post.translations.forEach((val) =>
+      staticParams.push({ lang: val, slug: post.slug }),
+    );
+  });
 
-  return postsMeta.map((post) => ({
-    slug: post.slug,
-  }));
+  return staticParams;
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = params;
-  const post = await getPostByPath(`content/${slug}/index.mdx`);
+  const { slug, lang } = params;
+
+  const post = await getPostByPath(slug, lang);
   if (!post) {
     return {
       title: "Post Not Found",
@@ -34,9 +36,9 @@ export async function generateMetadata({ params }: Props) {
 }
 
 async function page({ params }: Props) {
-  const { slug } = params;
+  const { slug, lang } = params;
 
-  const post = await getPostByPath(`content/${slug}/index.mdx`);
+  const post = await getPostByPath(slug, lang);
   if (!post) return <h1>Not Found</h1>;
 
   return (
@@ -44,7 +46,7 @@ async function page({ params }: Props) {
       <header className="mx-auto mb-16 mt-20 max-w-lg px-4 md:mt-24 md:max-w-2xl lg:max-w-5xl lg:px-0">
         <Link
           href="/blog"
-          className="mb-5 flex items-center gap-2.5 text-cream-900 duration-150 hover:text-cream-800"
+          className="mb-5 flex w-fit items-center gap-2.5 text-cream-900 duration-300 hover:text-cream-700"
         >
           <FaArrowLeftLong className="h-3 w-3 md:h-4 md:w-4" />
           <span className="text-xs font-semibold md:text-base">
@@ -52,7 +54,11 @@ async function page({ params }: Props) {
           </span>
         </Link>
 
-        <div className="relative mb-2 h-52 md:h-80 lg:h-[40rem]">
+        <div
+          dir={lang === "ar" ? "rtl" : "ltr"}
+          lang={lang}
+          className="relative mb-2 h-52 md:h-80 lg:h-[40rem]"
+        >
           <div className="flex h-full w-full items-center justify-center">
             <h2 className="z-10 max-w-xs text-center text-xl font-bold text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.8)] md:max-w-xl md:text-3xl lg:text-4xl">
               {post.meta.title}
@@ -71,7 +77,7 @@ async function page({ params }: Props) {
           {post.meta.date} — {post.meta.readTime}
         </p>
       </header>
-      <main>
+      <main dir={lang === "ar" ? "rtl" : "ltr"} lang={lang}>
         <article className="prose prose-sm prose-neutral mx-auto px-4 pb-16 md:prose-lg lg:prose-xl md:max-w-3xl md:pb-20 lg:max-w-4xl">
           {post?.content}
         </article>
