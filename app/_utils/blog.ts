@@ -1,51 +1,38 @@
 import { Post, Meta } from "@/app/_types/Blog";
 import { mdxCompiler } from "../_lib/mdx";
 import { formatDate } from "./formatDate";
+import fs from "fs";
+import path from "path";
+import { notFound } from "next/navigation";
 
-export async function getPostByPath(path: string): Promise<Post | undefined> {
-  const result = await fetch(
-    `https://raw.githubusercontent.com/toukhyy/blog-content/master/${path}`,
-    {
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-  if (!result.ok) return undefined;
-  const rawMDX = await result.text();
-  if (rawMDX === "404: Not Found") return undefined;
+const blogDir = path.join(process.cwd(), "app", "_content", "posts");
 
-  const post = await mdxCompiler(rawMDX);
+export async function getPostByPath(
+  slug: string,
+  lang: string,
+): Promise<Post | undefined> {
+  try {
+    const filePath = path.join(blogDir, slug, lang + ".mdx");
 
-  return post;
+    const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" });
+
+    if (!fileContent) return undefined;
+
+    const post = await mdxCompiler(fileContent);
+
+    return post;
+  } catch (error) {
+    notFound();
+  }
 }
 
 export async function getPostsMeta(): Promise<Meta[] | undefined> {
-  const result = await fetch(
-    "https://api.github.com/repos/toukhyy/blog-content/git/trees/master?recursive=1",
-    {
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-
-  if (!result.ok) return undefined;
-
-  const content = await result.json();
-
-  const mdxPaths: string[] = content.tree
-    .filter((obj: { path: string }) => obj.path.endsWith(".mdx"))
-    .map((obj: { path: string }) => obj.path);
+  const files = fs.readdirSync(blogDir);
 
   const postsMeta: Meta[] = [];
 
-  for (const path of mdxPaths) {
-    const post = await getPostByPath(path);
+  for (const file of files) {
+    const post = await getPostByPath(file, "en");
     if (post) {
       postsMeta.push(post.meta);
     }
@@ -56,4 +43,11 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
   });
 
   return postsMeta.map((post) => ({ ...post, date: formatDate(post.date) }));
+}
+
+export function generateBlogPath(
+  slug: string,
+  translations: ("en" | "ar")[],
+): string {
+  return translations.includes("en") ? `blog/en/${slug}` : `blog/ar/${slug}`;
 }
