@@ -7,9 +7,12 @@ import { notFound } from "next/navigation";
 
 const blogDir = path.join(process.cwd(), "app", "_content", "posts");
 
-export async function getPostByPath(slug: string): Promise<Post | undefined> {
+export async function getPostByPath(
+  slug: string,
+  lang: string,
+): Promise<Post | undefined> {
   try {
-    const filePath = path.join(blogDir, slug, "index.mdx");
+    const filePath = path.join(blogDir, slug, lang + ".mdx");
 
     const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" });
 
@@ -29,7 +32,7 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
   const postsMeta: Meta[] = [];
 
   for (const file of files) {
-    const post = await getPostByPath(file);
+    const post = await getPostByPath(file, "en");
     if (post) {
       postsMeta.push(post.meta);
     }
@@ -40,4 +43,11 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
   });
 
   return postsMeta.map((post) => ({ ...post, date: formatDate(post.date) }));
+}
+
+export function generateBlogPath(
+  slug: string,
+  translations: ("en" | "ar")[],
+): string {
+  return translations.includes("en") ? `blog/en/${slug}` : `blog/ar/${slug}`;
 }

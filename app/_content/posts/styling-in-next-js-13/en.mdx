@@ -1,8 +1,10 @@
 ---
-title: 'Styling in Next.js 13'
-date: '2023-11-01'
-tags: ['programming', 'JavaScript', 'ReactJS', 'NextJS']
-banner: 'https://res.cloudinary.com/doaw1mqkw/image/upload/v1699259403/toukhy/steve-johnson-mfYFY0XnFug-unsplash-compressed_hpiwjb.jpg'
+title: "Styling in Next.js 13"
+date: "2023-11-01"
+language: "en"
+translations: ["en"]
+tags: ["programming", "JavaScript", "ReactJS", "NextJS"]
+banner: "https://res.cloudinary.com/doaw1mqkw/image/upload/v1699259403/toukhy/steve-johnson-mfYFY0XnFug-unsplash-compressed_hpiwjb.jpg"
 bannerCredits: Photo by Steve Johnson (https://unsplash.com/@steve-johnson)
 ---
 
@@ -22,7 +24,7 @@ CSS Modules is a popular approach for styling React applications, and it works s
 **then you would use it like this in the component**
 
 ```jsx title="MyComponent.js"
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 const MyComponent = () => {
   return <div className={styles.container}>Hello, Next.js 13!</div>;
@@ -36,7 +38,7 @@ export default MyComponent;
 Next.js 13 also works well with CSS-in-JS libraries like Styled Components or Emotion. These libraries allow you to write CSS directly in your JavaScript code using tagged template literals.
 
 ```jsx title="MyComponent.js"
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
   padding: 16px;
