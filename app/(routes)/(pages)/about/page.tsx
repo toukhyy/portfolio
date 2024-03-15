@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div className="mx-auto mb-16 mt-20 flex max-w-5xl flex-col-reverse items-center gap-10 px-4 md:mt-24 lg:flex-row lg:justify-between lg:gap-0 lg:px-4">
+    <main className="mx-auto mb-14 mt-20 flex min-h-screen max-w-5xl flex-col-reverse items-center gap-10 px-4 lg:mb-0 lg:mt-0 lg:flex-row lg:justify-between lg:gap-0 lg:px-4">
       {/* Description */}
       <div className="max-w-xs md:max-w-md">
         <p className="text-2xl font-semibold">Hi, I'm Abdelrahman.</p>
@@ -64,6 +64,6 @@ export default function page() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
