@@ -21,9 +21,9 @@ div[data-rehype-pretty-code-fragment] pre {
 div[data-rehype-pretty-code-fragment] [data-rehype-pretty-code-title] {
   font-weight: 400;
   background-color: #383d43;
-  padding: 0.1rem 0 0.1rem 0.5rem;
+  padding: 0.15rem 0 0.15rem 0.5rem;
   color: #a7a9ab;
-  font-size: 14px;
+  font-size: 12px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }

@@ -6,7 +6,7 @@ import { generateBlogPath } from "@/app/_utils/blog";
 
 const completeTranslations = {
   en: "English",
-  ar: "عربي",
+  ar: "Arabic",
 };
 
 export function FeaturedCard({ post }: { post: Meta }) {
@@ -18,30 +18,30 @@ export function FeaturedCard({ post }: { post: Meta }) {
       href={generateBlogPath(slug, translations)}
       className="flex w-full flex-col items-center justify-between overflow-hidden rounded-md bg-cream-200 text-cream-900 shadow-sm outline outline-offset-4 outline-transparent duration-300 hover:outline-cream-500 md:h-[50vh] md:flex-row md:items-stretch lg:h-[70vh]"
     >
-      <div className="flex flex-col gap-4 p-8 md:gap-12">
+      <div className="flex flex-col gap-2 p-8 md:gap-12">
         <p className="font-semibold text-cream-800">Most Recent Article</p>
         <div className="flex h-full flex-col justify-between gap-2">
           <div>
-            <p className="mb-2.5 text-xl font-semibold md:text-3xl lg:text-4xl">
+            <p className="mb-1.5 text-xl font-semibold md:mb-4 md:text-3xl lg:text-4xl">
               {title}
             </p>
-            <div className="flex gap-1">
+            <div className="mb-6 flex gap-1 text-sm">
               <p>Read in</p>
               <div>
                 {translations.map((sub) => (
                   <Link
                     href={`blog/${sub}/${slug}`}
                     key={sub}
-                    className="mr-2 rounded bg-cream-400 px-2 font-semibold duration-300 hover:bg-cream-600"
+                    className="mr-2 rounded bg-cream-400 px-2 py-0.5 text-xs duration-300 hover:bg-cream-500 md:text-sm"
                   >
-                    <span className="text-xs">{completeTranslations[sub]}</span>
+                    {completeTranslations[sub]}
                   </Link>
                 ))}
               </div>
             </div>
           </div>
 
-          <p className="font-semibold text-cream-600 md:text-lg">
+          <p className="text-xs font-semibold text-cream-600 md:text-base">
             {date} — {readTime}
           </p>
         </div>
@@ -62,7 +62,7 @@ export function Card({ post }: { post: Meta }) {
   const { bannerCredits, banner, slug, title, date, readTime } = post;
 
   return (
-    <li className="w-80 overflow-hidden rounded-md text-cream-900 shadow outline outline-2 outline-offset-4 outline-transparent duration-300 hover:outline-cream-500">
+    <li className="w-72 overflow-hidden rounded-md text-cream-900 outline outline-2 outline-offset-4 outline-transparent duration-300 hover:bg-cream-100 hover:outline-cream-500">
       <Link href={generateBlogPath(slug, post.translations)}>
         <Image
           alt={bannerCredits}
@@ -70,23 +70,23 @@ export function Card({ post }: { post: Meta }) {
           title={bannerCredits.split(" (")[0]}
           width={800}
           height={800}
-          className="h-[40vh] object-cover"
+          className="h-[40vh] rounded-t-lg object-cover"
         />
-        <div className="px-4 pb-4 pt-4">
-          <p className="mb-3 text-sm text-cream-700">
+        <div className="rounded-bl-lg rounded-br-lg border-b-2 border-l-2 border-r-2 border-cream-400 px-4 pt-2">
+          <p className="mb-1 text-xs text-cream-700">
             {date} — {readTime}
           </p>
-          <p className="mb-4 text-xl font-semibold">{title}</p>
-          <div className="flex items-center gap-1 font-thin">
+          <p className="mb-6 font-semibold">{title}</p>
+          <div className="mb-3 flex items-center gap-1 text-sm font-thin">
             <p>Read in</p>
             <div className="text-xs">
               {post.translations.map((sub) => (
                 <Link
                   href={`blog/${sub}/${post.slug}`}
                   key={sub}
-                  className="mr-1.5 rounded bg-cream-300 px-2 py-0.5  font-semibold duration-300 hover:bg-cream-600"
+                  className="mr-1.5 rounded bg-cream-300 px-2 py-0.5 font-normal duration-300 hover:bg-cream-500"
                 >
-                  <span>{completeTranslations[sub]}</span>
+                  {completeTranslations[sub]}
                 </Link>
               ))}
             </div>

@@ -43,7 +43,7 @@ async function page({ params }: Props) {
 
   return (
     <>
-      <header className="mx-auto mb-16 mt-20 max-w-lg px-4 md:mt-24 md:max-w-2xl lg:max-w-5xl lg:px-0">
+      <header className="mx-auto mb-10 mt-20 max-w-lg px-4 md:mb-16 md:mt-24 md:max-w-2xl lg:max-w-5xl lg:px-0">
         <Link
           href="/blog"
           className="mb-5 flex w-fit items-center gap-2.5 text-cream-900 duration-300 hover:text-cream-700"
@@ -73,12 +73,12 @@ async function page({ params }: Props) {
             className="absolute left-0 top-0 h-52 w-full rounded-md object-cover md:h-full"
           />
         </div>
-        <p className="text-center text-sm text-cream-800 md:text-lg">
+        <p className="text-center text-xs text-cream-800 md:text-base">
           {post.meta.date} — {post.meta.readTime}
         </p>
       </header>
       <main dir={lang === "ar" ? "rtl" : "ltr"} lang={lang}>
-        <article className="prose prose-sm prose-neutral mx-auto px-4 pb-16 md:prose-lg lg:prose-xl md:max-w-3xl md:pb-20 lg:max-w-4xl">
+        <article className="prose prose-sm prose-neutral mx-auto px-8 pb-16 md:prose-base lg:prose-lg md:max-w-2xl md:pb-20 lg:max-w-3xl">
           {post?.content}
         </article>
       </main>
